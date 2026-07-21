@@ -39,3 +39,13 @@ for student in students_in_line:
 
 print("\n================================")
 print("Total students approved for Fast Lane: " + str(fast_lane_count))
+
+
+
+#answers to questions:
+# Kailangan ang override para mabigyan ng exception ang may mga special permission tulad ng sa teacher's pass. 
+# Sa Python kasi (if-elif-else), top-to-bottom ang pagbasa ng code at hihinto agad ito sa unang condition na mag-True.
+#Kapag inuna kasi ang time at item check, ang mga estudyanteng may teacher's pass na sobra sa items 
+# o oras—tulad ni Ella (20 mins left, 5 items)—ay mare-reject agad direct sa regular line.
+# Hindi na maaabot ng program ang line ng teacher_pass kasi hinarang na siya sa taas. Kaya dapat laging nasa pinakataas
+#  ang override condition para mauna ang priority rules.

@@ -46,3 +46,26 @@ while True:
 
 print("\n=== Library Kiosk Session Ended ===")
 print("Total students successfully borrowed books: " + str(allowed_borrowers_count))
+
+
+
+# 6. What happens if a student types "Yes" instead of "yes" for overdue books, or "Active" instead of "active" for status? 
+# How should Aliah's code handle these input variations so the kiosk doesn't break? 
+#-answer:Case-sensitive ang Python, kaya ang "Yes" o "Active" ay hindi magmamatch sa "yes" o "active". Pwedeng magkamali 
+# ang kiosk at isiping walang overdue books ang student o invalid ang status niya.Para maiayos ito Gamitan ng .strip().lower() ang mga input(). 
+# Tinatanggal nito ang extra spaces at ginagawang lowercase ang lahat ng letters para matapat sa conditions nang hindi nag-e-error.
+
+
+#7.  The rules say overdue books block borrowing **"regardless of status"** — meaning even an active-status student with overdue books is
+#  blocked. Why did Aliah write the overdue check as a priority condition, and what would go wrong if she checked status first instead?
+
+#ANS: Unang requirement ito sa rule sa written output ito ang nagsisilbing harang ang may overdue books 
+# regardless ng status para mabilis ma-reject ang ineligible.
+
+#Anong problema kung inuna ang status: Pwedeng makalusot ang active student na may overdue, o kaya magpakita ang system ng maling error 
+# message kaysa na sabihing isauli muna ang libro.
+
+#8 What if a student has no overdue books, active status, but tries to borrow 0 books? 
+# Should the kiosk treat this as valid input or an error? Modify your code to handle this edge case gracefully.
+
+#ans: its an invalid input. Ang kiosk ay dapat magpakita ng error message na nagsasabing kailangan mag-request ng kahit isang libro para makapag-borrow.
